@@ -61,6 +61,8 @@ const LocationSchema = new Schema({
   description: { type: String, required: true },
   imageURL: { type: String, required: true },
   realm: String,
+  //if special location, fill with name; otherwise, null
+  special: String,
   strength: Number,
   craft: Number,
   carry: Number,
@@ -71,8 +73,8 @@ const LocationSchema = new Schema({
 const RealmSchema = new Schema({
   name: { type: String, required: true },
   imageURL: {type: String, required: true},
-  locations: {type: Schema.ObjectID, ref: 'Location'},
-  enemies: {type: Schema.ObjectId, ref: 'Enemy'},
+  locations: [{type: Schema.ObjectId, ref: 'Location'}],
+  enemies: [{type: Schema.ObjectId, ref: 'Enemy'}],
   events: [{type: Schema.ObjectId, ref: 'Event'}]
 })
 

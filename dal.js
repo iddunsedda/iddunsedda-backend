@@ -1,5 +1,5 @@
 //pulling in schemas from model file
-const { Artifact, Enemy, Event, Follower, Location, Realm } = require('./Models/Models');
+const { Artifact, Enemy, Event, Follower, Location, Realm } = require('./models/Models');
 
 //setting up mongoose and bluebird
 const mongoose = require('mongoose');
@@ -13,4 +13,13 @@ const addArtifact = (newArtifact) => {
   })
   console.log('New artifact added!');
   return Promise.resolve("success")
+}
+
+const getAllArtifacts = () => {
+  return Artifact.find()
+}
+
+
+module.exports = {
+  addArtifact, getAllArtifacts
 }
