@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 //SCHEMAS
 
@@ -6,6 +7,7 @@ const ArtifactSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   imageURL: { type: String, required: true },
+  icon: {type: String, required: true},
   realm: String,
   strength: Number,
   craft: Number,
@@ -22,7 +24,7 @@ const EnemySchema = new mongoose.Schema({
   craft: Number,
   carry: Number,
   life: Number,
-  artifacts: [{ type: Schema.Types.ObjectId, ref: 'Artifact' }]
+  artifacts: [{ type: Schema.ObjectId, ref: 'Artifact' }]
 });
 
 const EventSchema = new mongoose.Schema({
@@ -34,14 +36,15 @@ const EventSchema = new mongoose.Schema({
   craft: Number,
   carry: Number,
   life: Number,
-  artifacts: [{ type: Schema.Types.ObjectId, ref: 'Artifact' }],
-  followers: [{ type: Schema.Types.ObjectId, ref: 'Follower'}]
+  artifacts: [{ type: Schema.ObjectId, ref: 'Artifact' }],
+  followers: [{ type: Schema.ObjectId, ref: 'Follower'}]
 })
 
 const FollowerSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   imageURL: { type: String, required: true },
+  icon: { type: String, required: true },
   realm: String,
   strength: Number,
   craft: Number,
@@ -58,7 +61,7 @@ const LocationSchema = new mongoose.Schema({
   craft: Number,
   carry: Number,
   life: Number,
-  enemies: [{type: Schema.Types.ObjectId, ref: 'Enemy'}]
+  enemies: [{type: Schema.ObjectId, ref: 'Enemy'}]
 })
 
 //SCHEMA CONSTANTS
