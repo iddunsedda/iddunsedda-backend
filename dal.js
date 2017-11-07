@@ -1,5 +1,5 @@
 //pulling in schemas from model file
-const { Artifact, Enemy, Event, Follower, Location } = require('./Models/Models');
+const { Artifact, Enemy, Event, Follower, Location, Realm } = require('./Models/Models');
 
 //setting up mongoose and bluebird
 const mongoose = require('mongoose');
