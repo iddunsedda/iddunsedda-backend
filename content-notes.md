@@ -18,10 +18,8 @@ The realm of men.
 ### Followers
 #### Horse
 * Adds one carry slot to the player's capacity.
-
 #### Dog
 * Adds one combat strength.
-
 #### Fox
 * Adds one craft.
 
@@ -57,7 +55,13 @@ The realm of men.
 ## Special Event: Crossing the Rainbow Bridge
 
 ## Realm: Asgard
+
 ### Followers
+#### Ratatosk (Squirrel)
+* Adds 1 craft.
+* Once, allows player to return from either Midgard or Jotunheim to Asgard instantly. If this power is used, Ratatosk will return to Yggdrasil and leave the player's side.
+#### 
+
 ### Enemies
 ### Events
 ### Objects
